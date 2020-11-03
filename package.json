@@ -11,9 +11,8 @@
     "core-js": "^3.6.5",
     "primeflex": "^2.0.0",
     "primeicons": "^4.0.0",
-    "primevue": "3.0.0",
+    "primevue": "^3.0.1",
     "vue": "^3.0.0",
-    "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
@@ -33,6 +32,7 @@
     "prettier": "^1.19.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "typescript": "~3.9.3"
+    "typescript": "~3.9.3",
+    "vue-auto-routing": "^0.5.0"
   }
 }
