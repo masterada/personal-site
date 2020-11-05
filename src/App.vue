@@ -16,9 +16,19 @@
     :class="{ closed: !leftMenu.visible }"
   >
     <PanelMenu :model="leftMenu.items" />
-    <div class="sidebar-footer">
-      <span class="text2">Powered by:</span> <a href="https://v3.vuejs.org/">Vue3 <img src="@/assets/vue.png" alt="Vue3" class="vue-img"/></a> +
-      <a href="https://primefaces.org/primevue/"><img src="@/assets/primevue-logo.png" alt="PrimeVue" class="primevue-img"/></a>
+    <div class="sidebar-footer p-grid">
+      <div class="p-col">
+        <a href="https://github.com/masterada/personal-site" target="_blank"><i class="pi pi-github"></i></a>
+      </div>
+      <div class="p-col">
+        <a href="https://dash.cloudflare.com/" target="_blank"><img src="@/assets/cf-logo-v-rev.svg" alt="Cloudflare" class="cf-img"/></a>
+      </div>
+      <div class="p-col">
+        <a href="https://v3.vuejs.org/" target="_blank"><img src="@/assets/vue.png" alt="Vue3" class="vue-img"/></a>
+      </div>
+      <div class="p-col">
+        <a href="https://primefaces.org/primevue/" target="_blank"><img src="@/assets/primevue-logo.png" alt="PrimeVue" class="primevue-img"/></a>
+      </div>
     </div>
   </Sidebar>
 
@@ -173,9 +183,12 @@ export default defineComponent({
 
   .sidebar-footer {
     vertical-align: middle;
-    padding: 0.5rem;
     position: absolute;
     bottom: 0;
+    margin: 0;
+    padding: 0.6rem 1.5rem 0.5rem;
+    width: 100%;
+    background: var(--surface-c);
 
     a {
       text-decoration: none;
@@ -187,8 +200,14 @@ export default defineComponent({
       margin-top: -0.2rem;
     }
 
+    .cf-img {
+      height: 2.5rem;
+      margin: -0.8rem -0.5rem -0.4em -0.3rem;
+    }
+
     .primevue-img {
       height: 1.5rem;
+      margin-right: 0.5rem;
     }
 
     .vue-img {

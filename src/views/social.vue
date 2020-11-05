@@ -4,7 +4,7 @@
       <template v-slot:title>Social Media</template>
       <template v-slot:content>
         <a href="https://github.com/masterada" target="_blank" class=" p-mr-2">
-          <Button icon="pi pi-github" label="Github" class="p-button-info" />
+          <Button icon="pi pi-github" label="GitHub" class="p-button-info" />
         </a>
         <a href="https://www.linkedin.com/in/kiss-%C3%A1d%C3%A1m-3009b08a/" target="_blank" class="p-mx-2">
           <Button class="p-button-info"><img src="@/assets/linkedin.png" alt="LinkedIn" class="icon-img" />LinkedIn</Button>
