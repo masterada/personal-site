@@ -1,22 +1,19 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-
-function page(name: string, path: string) {
-  return {
-    path,
-    name,
-    component: () => import('../views' + path + '.vue')
-  }
-}
+import routesJson from '@/router/routes.js'
 
 const routes: Array<RouteRecordRaw> = [
+  ...(routesJson as { path: string; name: string; view?: string }[]).map(r => {
+    const view = r.view ?? r.path.substr(1)
+    return {
+      path: r.path,
+      name: r.name,
+      component: () => import('../views/' + view + '.vue')
+    }
+  }),
   {
-    path: '/',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/index.vue')
-  },
-  page('About', '/about'),
-  page('Social Media', '/social'),
-  page('Awesome projects', '/awesome')
+    path: '/:catchAll(.*)',
+    component: () => import('../views/404.vue')
+  }
 ]
 
 const router = createRouter({

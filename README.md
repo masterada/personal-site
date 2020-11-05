@@ -1,5 +1,7 @@
 # personal-site
 
+My personal site written in vue3.
+
 ## Project setup
 ```
 yarn install
@@ -18,6 +20,12 @@ yarn build
 ### Lints and fixes files
 ```
 yarn lint
+```
+
+## Deploy
+Copy wrangler.toml.example to wrangler.toml and add account_id and zone_id.
+```
+yarn build && yarn deploy
 ```
 
 ### Customize configuration
